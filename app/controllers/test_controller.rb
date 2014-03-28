@@ -1,4 +1,10 @@
+class ApplicationController < ActiveRecord::Base
+  include SslRequirement
+end
+
 class TestController < ApplicationController
+  ssl_required :test
+
   def test
 
     #create node
